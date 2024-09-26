@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TFS Website</title>
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-image {
+            width: 150px;
+            height: auto;
+            margin-left: 20px;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        /* Menu Icon */
+        .menu-icon {
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        /* Main Content */
+        main {
+            padding: 20px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="menu-icon" id="menu-icon">&#9776;</div>
+            <h1>TFS Website</h1>
+            <img src="https://via.placeholder.com/150x50" alt="Sample Header Image" class="header-image">
+        </div>
+    </header>
+
+    <nav id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" id="closebtn">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Welcome to TFS</h2>
+            <p>This is a sample TFS website with a sliding menu, footer, and a header with an image.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 TFS. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Open the sidebar
+        document.getElementById("menu-icon").addEventListener("click", function() {
+            document.getElementById("sidebar").style.width = "250px";
+        });
+
+        // Close the sidebar
+        document.getElementById("closebtn").addEventListener("click", function() {
+            document.getElementById("sidebar").style.width = "0";
+        });
+    </script>
+</body>
+</html>
